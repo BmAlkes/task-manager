@@ -7,16 +7,16 @@
   - Rota Edit se refere ao componente Edit e é representada pela rota '/edit/:id'
 
 2 - Criar estado principal do projeto no App.js utilizando useState
-    - Estado onde as tarefas vão vai ficar armazenadas
-    - O estado deve se chamar tasks e função setadora setTasks.
+  - Estado onde as tarefas vão vai ficar armazenadas
+  - O estado deve se chamar tasks e função setadora setTasks.
 
 3 - Página Home
-    - Passar o valor do tasks e função setTasks do App.js para a página Home através de props (de cima para baixo - Prop Drilling)
-        - Exemplo: <Home tasks={tasks} setTasks={setTasks} />
-    - Rebecer a tasks e setTasks através da props no componente Home.
-    - Criar um useEffect, fazendo uma chamada para a fake api e adicionando as tasks através do setTasks.
+  - Passar o valor do tasks e função setTasks do App.js para a página Home através de props (de cima para baixo - Prop Drilling)
+      - Exemplo: <Home tasks={tasks} setTasks={setTasks} />
+  - Rebecer a tasks e setTasks através da props no componente Home.
+  - Criar um useEffect, fazendo uma chamada para a fake api e adicionando as tasks através do setTasks.
 
-    - Criação de formulário responsável pela adição de tarefas
+  - Criação de formulário responsável pela adição de tarefas
         - Estilização
         - Criação de estado referente ao valor do input (name, setName)
         - Adição de evento onChange e valor no input 
