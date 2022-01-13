@@ -16,7 +16,7 @@
   - Rebecer a tasks e setTasks através da props no componente Home.
   - Criar um useEffect, fazendo uma chamada para a fake api e adicionando as tasks através do setTasks.
 
-  - Criação de formulário responsável pela adição de tarefas
+    - Criação de formulário responsável pela adição de tarefas
         - Estilização
         - Criação de estado referente ao valor do input (name, setName)
         - Adição de evento onChange e valor no input 
