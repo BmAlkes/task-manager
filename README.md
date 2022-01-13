@@ -4,6 +4,9 @@
   - Primeiro, vamo fazer o projeto sem utilização de back-end, quando tu conseguir fazer direitinho
   a gente pula pra adição de back-end e um grau de complexidade maior
 
+
+# Para começar o backend, escreva no terminal: yarn server
+
 1 - Definir as rotas do projeto (Home e Edit)
     - Rota Home se refere ao componente Home e é representada pela rota '/' 
     - Rota Edit se refere ao componente Edit e é representada pela rota '/edit/:id'
