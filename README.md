@@ -56,13 +56,13 @@
     no array de dependência o ID, ou seja, toda vez que o ID da página edit mudar (clicar em edit de outra task), mais uma chamada a API vai ser feita com o novo ID.
 
     - Estilização 
-    
+    - Criação dos estados responsáveis pelos inputs (text e checkbox).
+
     - Criação de novo formulário com todas as informações
         - Adição de onSubmit no form e onChange nos inputs.
         - onSubmit recebe uma função handleSubmit responsável por atualizar as tasks.
 
-
-        - Função handleSubmit
+        - Função handleSubmit (responsável por atualizar a task)
             - Utilizando setTasks para modificar o valor da task (dica: use o método map e o id da task)
             - Modificação do edit padrão utilizando axios (método PATCH)
             - Caso edite a task, navegue para a Home utilizando navigate('/').
