@@ -12,7 +12,7 @@
 
 3 - Página Home
   - Passar o valor do tasks e função setTasks do App.js para a página Home através de props (de cima para baixo - Prop Drilling)
-      - Exemplo: <Home tasks={tasks} setTasks={setTasks} />
+      - Exemplo: ``<Home tasks={tasks} setTasks={setTasks} />``
   - Rebecer a tasks e setTasks através da props no componente Home.
   - Criar um useEffect, fazendo uma chamada para a fake api e adicionando as tasks através do setTasks.
 
@@ -45,11 +45,11 @@
             ))}
         
 4 - Página Edit
-    - Passar o valor do tasks e função setTasks do App.js para a página Edit através de props (de cima para baixo - Prop Drilling)
-        - Exemplo: <Edit tasks={tasks} setTasks={setTasks} />
-    - Rebecer a tasks e setTasks através da props no componente Edit.
+  - Passar o valor do tasks e função setTasks do App.js para a página Edit através de props (de cima para baixo - Prop Drilling)
+      - Exemplo: <Edit tasks={tasks} setTasks={setTasks} />
+  - Rebecer a tasks e setTasks através da props no componente Edit.
 
-    - Criação de estado [task, setTask].
+  - Criação de estado [task, setTask].
     
     - Utilizar o hook useParams para receber o parâmetro enviado (nesse caso, o ID da task).
     - Criar um useEffect, fazendo uma chamada a API com o id (do useParams) e adicionando ao estado task, e botando 
