@@ -6,12 +6,12 @@ import Edit from "./pages/Edit";
 import "./styles/style.css";
 
 const App = () => {
-  const [tasks, setTask] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   const fetchTask = async () => {
     try {
       const { data } = await axios.get(`http://localhost:5000/tasks`);
-      setTask(data);
+      setTasks(data);
     } catch (e) {
       console.log(e);
     }
@@ -28,7 +28,7 @@ const App = () => {
           <Route
             path="/"
             element={
-              <Home tasks={tasks} setTask={setTask} fetchTask={fetchTask} />
+              <Home tasks={tasks} setTasks={setTasks} fetchTask={fetchTask} />
             }
           />
           <Route path="edit/:id" element={<Edit />} />

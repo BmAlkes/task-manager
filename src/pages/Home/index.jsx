@@ -4,11 +4,13 @@ import { Form, Container } from "./styles";
 import { useAlert } from "react-alert";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import TaskItem from "../../Components/taskItem/TaskItem";
+import { contextTypes } from "react-addons-css-transition-group";
 
-const Index = ({ tasks, setTask, fetchTask }) => {
+const Index = ({ tasks, setTasks, fetchTask }) => {
   const [name, setName] = useState("");
 
   const handleChange = (event) => {
+    event.preventDefault();
     setName(event.target.value);
   };
   const alert = useAlert();
@@ -22,10 +24,8 @@ const Index = ({ tasks, setTask, fetchTask }) => {
         name,
         complete: false,
       });
-      await fetchTask();
-      setTask({ ...tasks, name });
+      setTasks([...tasks, { name, complete: false }]);
       alert.success("tarefa adiciona com sucesso");
-      setName("");
     } catch (e) {
       alert.error("something wrong");
     }
@@ -46,7 +46,7 @@ const Index = ({ tasks, setTask, fetchTask }) => {
       <Container>
         <ul>
           {tasks.map((task) => (
-            <TaskItem key={task.id} task={task} />
+            <TaskItem task={task} fetchTask={fetchTask} />
           ))}
         </ul>
       </Container>

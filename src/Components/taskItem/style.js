@@ -15,9 +15,15 @@ margin-top: 0.5rem;
      font-size:1.3rem;
      padding-left:20px;
      flex:1;
+     
+ }
+ .task-description.true{
+     text-decoration:line-through;
  }
  .delete{
      padding:5px
  }
+
+ 
 
 `;
