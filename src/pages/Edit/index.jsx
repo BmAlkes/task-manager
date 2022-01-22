@@ -21,7 +21,7 @@ const Index = () => {
       setData(response.data);
       setCheckbox(response.data.complete);
     });
-  }, []);
+  }, [params.id]);
 
   const handleChange = (event) => {
     event.preventDefault();

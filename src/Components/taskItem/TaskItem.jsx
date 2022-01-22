@@ -17,7 +17,7 @@ const TaskItem = ({ task, fetchTask }) => {
   };
 
   return (
-    <Container key={task.name}>
+    <Container>
       <nav>
         <Link to={`edit/${task.id}`}>
           <div className={`task-description  ${done}`}>{task.name}</div>
