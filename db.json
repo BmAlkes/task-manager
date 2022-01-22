@@ -1,19 +1,9 @@
 {
   "tasks": [
     {
-      "name": "sdsdasd",
+      "name": "pokemon 5",
       "complete": false,
       "id": 1
-    },
-    {
-      "name": "sdsdasdddddd",
-      "complete": false,
-      "id": 2
-    },
-    {
-      "name": "qqqw",
-      "complete": false,
-      "id": 3
     }
   ]
 }

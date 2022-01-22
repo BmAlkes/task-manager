@@ -11,10 +11,19 @@ margin-top: 0.5rem;
  align-items: center;
  justify-content: center;
 
- .task-description{
+ nav{
+     flex:1
+ }
+
+ nav a{
+     text-decoration: none;
+     color:#000;
+    }
+    
+    .task-description{
      font-size:1.3rem;
      padding-left:20px;
-     flex:1;
+     text-decoration:none;
      
  }
  .task-description.true{

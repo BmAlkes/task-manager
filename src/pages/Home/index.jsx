@@ -4,7 +4,6 @@ import { Form, Container } from "./styles";
 import { useAlert } from "react-alert";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import TaskItem from "../../Components/taskItem/TaskItem";
-import { contextTypes } from "react-addons-css-transition-group";
 
 const Index = ({ tasks, setTasks, fetchTask }) => {
   const [name, setName] = useState("");
@@ -46,7 +45,7 @@ const Index = ({ tasks, setTasks, fetchTask }) => {
       <Container>
         <ul>
           {tasks.map((task) => (
-            <TaskItem task={task} fetchTask={fetchTask} />
+            <TaskItem task={task} fetchTask={fetchTask} id={task.name} />
           ))}
         </ul>
       </Container>
