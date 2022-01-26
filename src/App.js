@@ -8,7 +8,7 @@ import "./styles/style.css";
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
-  const fetchTask = async () => {
+  const fetchTask = async (tasks) => {
     try {
       const { data } = await axios.get(`http://localhost:5000/tasks`);
       setTasks(data);
@@ -31,7 +31,12 @@ const App = () => {
               <Home tasks={tasks} setTasks={setTasks} fetchTask={fetchTask} />
             }
           />
-          <Route path="edit/:id" element={<Edit />} />
+          <Route
+            path="edit/:id"
+            element={
+              <Edit tasks={tasks} setTasks={setTasks} fetchTask={fetchTask} />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>

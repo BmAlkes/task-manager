@@ -1,9 +1,14 @@
 {
   "tasks": [
     {
-      "name": "pokemon 8",
+      "name": "pikachu new one",
       "complete": true,
       "id": 1
+    },
+    {
+      "name": "pikachu",
+      "complete": true,
+      "id": 2
     }
   ]
 }

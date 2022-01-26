@@ -6,7 +6,7 @@ import axios from "axios";
 import { AiFillCheckSquare } from "react-icons/ai";
 import { useAlert } from "react-alert";
 
-const Index = () => {
+const Index = (tasks, setTasks) => {
   const params = useParams();
 
   const [data, setData] = useState([]);
@@ -32,23 +32,31 @@ const Index = () => {
     setCheckbox(!checkbox);
   };
 
-  const handleEditTask = async () => {
+  const handleEditTask = async (event) => {
+    event.preventDefault();
     try {
-      await axios.patch(`http://localhost:5000/tasks/${params.id}`, {
-        name: text,
-        complete: checkbox,
-      });
+      const { data } = await axios.patch(
+        `http://localhost:5000/tasks/${params.id}`,
+        {
+          name: text,
+          complete: checkbox,
+        }
+      );
+      setTasks(
+        tasks.map((task) =>
+          task.id === params.id ? { ...task, ...data } : task
+        )
+      );
       navigate("/");
     } catch (e) {
       alert.error("something wrong");
     }
   };
-
   return (
     <Container>
       <div className="data">
         <h1>Edite sua Tarefa</h1>
-        <form>
+        <form onSubmit={handleEditTask}>
           <div className="campo1">
             <label>ID:</label>
             <span>{data.id}</span>
@@ -72,7 +80,7 @@ const Index = () => {
             </p>
           </div>
 
-          <button onClick={handleEditTask}>Editar</button>
+          <button>Editar</button>
         </form>
       </div>
     </Container>

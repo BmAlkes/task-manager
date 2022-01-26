@@ -7,13 +7,12 @@ import axios from "axios";
 const TaskItem = ({ task, fetchTask }) => {
   const [done, setDone] = useState(null);
 
-  const handleEndTask = (e) => {
+  const handleEndTask = () => {
     setDone(!done);
   };
-  const handleDeleteTask = (e) => {
-    e.preventDefault();
-    axios.delete(`http://localhost:5000/tasks/${task.id}`);
-    fetchTask();
+  const handleDeleteTask = async (id) => {
+    await axios.delete(`http://localhost:5000/tasks/${task.id}`);
+    fetchTask((prevState) => prevState.filter((task) => task.id !== id));
   };
 
   return (

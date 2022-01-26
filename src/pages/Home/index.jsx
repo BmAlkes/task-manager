@@ -23,7 +23,6 @@ const Index = ({ tasks, setTasks, fetchTask }) => {
         name,
         complete: false,
       });
-      setTasks([...tasks, { name, complete: false }]);
       alert.success("tarefa adiciona com sucesso");
     } catch (e) {
       alert.error("something wrong");
@@ -31,7 +30,7 @@ const Index = ({ tasks, setTasks, fetchTask }) => {
   };
   return (
     <>
-      <Form>
+      <Form onSubmit={handleTaskAddition}>
         <h1> Adicione uma Tarefa</h1>
         <div>
           <input
