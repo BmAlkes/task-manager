@@ -44,7 +44,7 @@ const Index = ({ tasks, setTasks, fetchTask }) => {
       <Container>
         <ul>
           {tasks.map((task) => (
-            <TaskItem task={task} fetchTask={fetchTask} key={task.name} />
+            <TaskItem task={task} fetchTask={fetchTask} key={task.id} />
           ))}
         </ul>
       </Container>

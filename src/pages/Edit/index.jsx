@@ -6,7 +6,7 @@ import axios from "axios";
 import { AiFillCheckSquare } from "react-icons/ai";
 import { useAlert } from "react-alert";
 
-const Index = (tasks, setTasks) => {
+const Index = ({ tasks, setTasks, fetchTask }) => {
   const params = useParams();
 
   const [data, setData] = useState([]);
@@ -47,6 +47,7 @@ const Index = (tasks, setTasks) => {
           task.id === params.id ? { ...task, ...data } : task
         )
       );
+      fetchTask();
       navigate("/");
     } catch (e) {
       alert.error("something wrong");

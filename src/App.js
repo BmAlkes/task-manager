@@ -8,7 +8,7 @@ import "./styles/style.css";
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
-  const fetchTask = async (tasks) => {
+  const fetchTask = async () => {
     try {
       const { data } = await axios.get(`http://localhost:5000/tasks`);
       setTasks(data);
